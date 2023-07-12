@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qna Start</title>
+</head>
+<body>
+    <h3>{{ qna.question }}</h3>
+    <form method="POST" action="{% url 'qna:show_answer' index=qna.index %}">
+        {% csrf_token %}
+        <button type="submit">답변하기</button>
+    </form>
+</body>
+</html>

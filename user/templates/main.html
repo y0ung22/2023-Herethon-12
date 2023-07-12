@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <a href="http://127.0.0.1:8000/loginPage/">로그인</a>
+    <a href="http://127.0.0.1:8000/signupPage/">회원가입</a>
+    {% if not user.is_staff %}
+        <form method="POST" action="{% url 'qna:start' %}"> <!-- 거울 속 클릭하면 서비스 시작 -->
+            {% csrf_token %}
+            <button type="submit">시작</button>
+        </form>
+    {% endif %}
+
+</body>
+</html>
