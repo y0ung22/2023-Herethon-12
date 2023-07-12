@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Narration</title>
+</head>
+<body>
+    <!-- 나레이션 마지막에 버튼 눌러서 qna_start.html로 이동 -->
+    <form method="POST" action="{% url 'qna:show_question' user.qrecord %}">
+        {% csrf_token %}
+        <button type="submit">질문 시작</button>
+    </form>
+</body>
+</html>
