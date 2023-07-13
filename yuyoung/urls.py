@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from user.views import mainPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('user.urls')),
     path('qna/', include('qna.urls')),
+    path('post/', include('post.urls')),
 ]
