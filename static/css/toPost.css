@@ -50,7 +50,8 @@ a:hover {
   color: white;
   text-decoration: none;
 }
-#goBtn {
+#goBtn,
+#textBox {
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
   -webkit-animation: fadein 3s; /* Safari and Chrome */

@@ -1,5 +1,5 @@
-setTimeout("gotoEnding()", 4000); // 3초 후 실행
+setTimeout("gotoToPost()", 4000); // 5초 후 실행
 
-function gotoEnding() {
+function gotoToPost() {
   window.location.href = "./toPost.html";
 }
