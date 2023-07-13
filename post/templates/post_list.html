@@ -6,10 +6,21 @@
 </head>
 <body>
     {% for post in posts %}
-        <div>{{ post.title }}</div>
+        <div>
+            <a href="{% url 'post:post_detail' pk=post.pk%}">{{ post.title }}</a>
+        </div>
         <div>{{ post.writer.username }}</div>
-    {% endfor %}
 
+        {% if request.user == post.writer %}
+            <form method="GET" action="{% url 'post:post_edit' pk=post.pk %}">
+                <button type="submit">수정</button>
+            </form>
+
+            <form method="GET" action="{% url 'post:post_delete' pk=post.pk %}">
+                <button type="submit">삭제</button>
+            </form>
+        {% endif %}
+    {% endfor %}
     <a href="http://127.0.0.1:8000/post/create">작성하기</a>
 </body>
 </html>
