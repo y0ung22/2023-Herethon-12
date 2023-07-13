@@ -19,6 +19,7 @@
           </div>
           <div id="username">{{ post.writer.username }}</div>
         </div>
+        {% if request.user == post.writer %}
         <div id="btn">
           <form method="GET" action="{% url 'post:post_edit' pk=post.pk %}">
             <button button type="submit">
@@ -31,8 +32,9 @@
             </button>
           </form>
         </div>
+        {% endif %}
       </div>
-      {% endif %} {% endfor %}
+      {% endfor %}
       <div id="writeBtn">
         <a href="http://127.0.0.1:8000/post/create">작성하기</a>
       </div>
