@@ -10,8 +10,8 @@
     <div id="container">
       <div id="click">거울 속을 눌러보세요</div>
       <form method="POST" action="{% url 'qna:start' %}">
-        <!-- 거울 속 클릭하면 서비스 시작 -->
         {% csrf_token %}
+        <!-- 거울 속 클릭하면 서비스 시작 -->
         <button type="submit" id="ctitle">遊 泳</button>
       </form>
       <div id="ktitle">유영</div>
