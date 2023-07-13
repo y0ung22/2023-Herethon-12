@@ -69,6 +69,19 @@ a {
   line-height: normal;
 }
 
+button {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+
 #backBtn {
   width: 120px;
   height: 32px;
@@ -77,13 +90,8 @@ a {
   bottom: 23.5px;
   background-image: url("/static/Image/label2.png");
   background-size: cover;
-  color: #f9f5eb;
-  text-align: center;
-  font-family: Pretendard Variable;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 #backBtn > a {
