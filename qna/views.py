@@ -8,24 +8,14 @@ def write_answer(request, index):
     user = request.user
 
     if not user.is_authenticated:
-        return redirect('user:login')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
+        return redirect('user:loginPage')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
 
     if request.method == "POST":
         qna = get_object_or_404(QnA, index=index, user=user)
-        nextqna = get_object_or_404(QnA, index=index+1, user=user)
+
 
         answer = request.POST.get('answer')
 
-        # if not answer is None:
-        #     # 데이터 변경
-        #     qna.answer = answer
-        #     user.qrecord = index+1
-        #
-        #     qna.save()
-        #     user.save()
-        #     return render(request, 'question.html', context={'qna': nextqna}) # 다음 qna 보여줌
-        # else:
-        #     return render(request, 'reply.html', context={'qna': qna})
         # 데이터 변경
         qna.answer = answer
         user.qrecord = index+1
@@ -34,7 +24,11 @@ def write_answer(request, index):
         user.save()
 
         if not answer is None:
-            return render(request, 'question.html', context={'qna': nextqna})  # 다음 qna 보여줌
+            if not qna.index == 3:
+                nextqna = get_object_or_404(QnA, index=index + 1, user=user)
+                return render(request, 'question.html', context={'qna': nextqna})  # 다음 qna 보여줌
+            else: # 마지막 게시글이라면 방명록 이동 버튼 존재하는 페이지로 이동
+                return render(request, 'toPost.html')
         else:
             return render(request, 'reply.html', context={'qna': qna})
 
@@ -45,7 +39,7 @@ def show_question(request, qrecord):
     user = request.user
 
     if not user.is_authenticated:
-        return redirect('user:login')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
+        return redirect('user:loginPage')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
 
     if request.method == "POST":
         qna = get_object_or_404(QnA, index=qrecord, user=user)
@@ -58,7 +52,7 @@ def show_answer(request, index):
     user = request.user
 
     if not user.is_authenticated:
-        return redirect('user:login')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
+        return redirect('user:loginPage')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
 
     if request.method == "POST":
         qna = get_object_or_404(QnA, index=index, user=user)
@@ -73,9 +67,13 @@ def start(request):
     qna = get_object_or_404(QnA, index=user.qrecord, user=user)
 
     if not user.is_authenticated:
-        return redirect('user:login')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
+        return redirect('user:loginPage')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
 
     if request.method == "POST":
+
+        if user.qrecord == 4:
+            return render(request, 'toPost.html')
+
         if user.qrecord == 0: # 첫 사용자라면 나레이션으로
             return render(request, 'narration.html', context={'user': user})
         else:
