@@ -20,26 +20,31 @@ const load = () => {
       },
     })
       .pause(1000)
-      .options({ speed: 50 })
+      .options({ speed: 70 })
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n2)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n3)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n4)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n5)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
-      .options({ speed: 50 })
+      .options({ speed: 80 })
       .type(n6)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n7)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 1000 })
 
       .go();
@@ -77,7 +82,7 @@ const ImageFade = () => {
           setTimeout(function () {
             increasing = true;
           }, 1000);
-        }, 2000);
+        }, 3000);
       }
     } else {
       opacity -= 0.05;
@@ -89,10 +94,10 @@ const ImageFade = () => {
 };
 
 const load2 = () => {
-  new TypeIt("#text", { speed: 50 }).type(n8).pause(1000).empty().type(n9).go();
+  new TypeIt("#text", { speed: 70 }).type(n8).pause(1500).empty().type(n9).go();
 };
 
 load();
-setTimeout(() => ImageFade(), 22800);
-setTimeout(() => load2(), 27500);
-setTimeout(() => btnFadeIn(), 32000);
+setTimeout(() => ImageFade(), 30000);
+setTimeout(() => load2(), 35000);
+setTimeout(() => btnFadeIn(), 41500);
