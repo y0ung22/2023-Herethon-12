@@ -1,0 +1,79 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("/static/Image/basicbg.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#textBox {
+  margin-top: 210px;
+  margin-bottom: 20px;
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+}
+
+#title {
+  margin: 30px 0px;
+  width: 297px;
+  text-align: center;
+  padding: 0px;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: #e83454 solid 1.5px;
+  color: #e83454;
+  font-family: Pretendard Variable;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#text {
+  padding: 10px;
+  width: 297px;
+  height: 342px;
+  border: solid 1.5px #e83454;
+  resize: none;
+  color: #8f8f8f;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: justify;
+  line-height: normal;
+}
+
+button {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+}
+
+#backBtn {
+  width: 120px;
+  height: 32px;
+  margin: auto;
+  position: absolute;
+  bottom: 23.5px;
+  background-image: url("/static/Image/label1.png");
+  background-size: cover;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
