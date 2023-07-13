@@ -20,26 +20,31 @@ const load = () => {
       },
     })
       .pause(1000)
-      .options({ speed: 50 })
+      .options({ speed: 70 })
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n2)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n3)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n4)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n5)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
-      .options({ speed: 50 })
+      .options({ speed: 80 })
       .type(n6)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 500 })
+      .options({ speed: 80 })
       .type(n7)
-      .pause(1000)
+      .pause(1500)
       .empty({ delay: 1000 })
 
       .go();
@@ -52,11 +57,11 @@ const btnFadeIn = () => {
     var div = document.getElementById("btnArea");
     if (opacity <= 1) {
       div.style.opacity = opacity;
-      opacity += 0.1;
+      opacity += 0.05;
     } else {
       clearTimeout(timerId);
     }
-  }, 200);
+  }, 100);
 };
 
 const ImageFade = () => {
@@ -69,24 +74,30 @@ const ImageFade = () => {
     image.style.opacity = opacity;
 
     if (increasing) {
-      opacity += 0.1;
+      opacity += 0.05;
       if (opacity >= 1) {
         increasing = false;
+        setTimeout(function () {
+          increasing = false;
+          setTimeout(function () {
+            increasing = true;
+          }, 1000);
+        }, 3000);
       }
     } else {
-      opacity -= 0.1;
+      opacity -= 0.05;
       if (opacity <= 0) {
         clearTimeout(timerId);
       }
     }
-  }, 200);
+  }, 100);
 };
 
 const load2 = () => {
-  new TypeIt("#text", { speed: 50 }).type(n8).pause(1000).empty().type(n9).go();
+  new TypeIt("#text", { speed: 70 }).type(n8).pause(1500).empty().type(n9).go();
 };
 
 load();
-setTimeout(() => ImageFade(), 22600);
-setTimeout(() => load2(), 27500);
-setTimeout(() => btnFadeIn(), 32000);
+setTimeout(() => ImageFade(), 30000);
+setTimeout(() => load2(), 35000);
+setTimeout(() => btnFadeIn(), 41500);
