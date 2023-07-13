@@ -52,11 +52,11 @@ const btnFadeIn = () => {
     var div = document.getElementById("btnArea");
     if (opacity <= 1) {
       div.style.opacity = opacity;
-      opacity += 0.1;
+      opacity += 0.05;
     } else {
       clearTimeout(timerId);
     }
-  }, 200);
+  }, 100);
 };
 
 const ImageFade = () => {
@@ -69,17 +69,17 @@ const ImageFade = () => {
     image.style.opacity = opacity;
 
     if (increasing) {
-      opacity += 0.1;
+      opacity += 0.05;
       if (opacity >= 1) {
         increasing = false;
       }
     } else {
-      opacity -= 0.1;
+      opacity -= 0.05;
       if (opacity <= 0) {
         clearTimeout(timerId);
       }
     }
-  }, 200);
+  }, 100);
 };
 
 const load2 = () => {
@@ -87,6 +87,6 @@ const load2 = () => {
 };
 
 load();
-setTimeout(() => ImageFade(), 22600);
+setTimeout(() => ImageFade(), 22800);
 setTimeout(() => load2(), 27500);
 setTimeout(() => btnFadeIn(), 32000);
