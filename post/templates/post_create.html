@@ -1,16 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>게시글 생성</title>
-</head>
-<body>
-    <form method="POST">
+    <link rel="stylesheet" href="/static/css/post_create.css" />
+  </head>
+  <body>
+    <div id="container">
+      <img src="/static/Image/write.png" id="textBox" />
+      <form method="POST">
         {% csrf_token %}
-        <input type="text" name="title" value="{{ post.title }}">
-        <input type="textarea" name="content" value="{{ post.content }}">
-        <button type="submit">작성하기</button>
-    </form>
-</body>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="제목을 적어주세요"
+          value="{{ post.title }}"
+        />
+        <input
+          id="text"
+          placeholder="당신 또는 다른 사람에게 전하고 싶은 이야기를 적어주세요."
+          type="textarea"
+          name="content"
+          value="{{ post.content }}"
+        />
+      </form>
+      <button id="backBtn" type="submit">작성하기</button>
+    </div>
+  </body>
 </html>
