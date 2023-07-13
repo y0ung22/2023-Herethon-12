@@ -1,0 +1,91 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("/static/Image/basicbg.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#textBox {
+  margin-top: 210px;
+  margin-bottom: 40px;
+  width: 280px;
+  height: 54px;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#title {
+  width: 297px;
+  padding-bottom: 5px;
+  border-bottom: #002b5b solid 2px;
+  color: #002b5b;
+  font-family: Pretendard Variable;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+#info {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #002b5b;
+  font-family: Pretendard Variable;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  position: relative;
+}
+
+#username {
+  margin: 0px 10px;
+}
+
+#time {
+  margin: 0px 10px;
+}
+
+#content {
+  padding: 10px;
+  width: 275px;
+  height: 320px;
+  border: solid 1.5px #002b5b;
+  color: #002b5b;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#backBtn {
+  width: 120px;
+  height: 32px;
+  margin: auto;
+  position: absolute;
+  bottom: 23.5px;
+  background-image: url("/static/Image/label2.png");
+  background-size: cover;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+#backBtn > a {
+  color: #f9f5eb;
+}
