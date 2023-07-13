@@ -23,14 +23,18 @@ def write_answer(request, index):
         qna.save()
         user.save()
 
-        if not answer is None:
-            if not qna.index == 3: # 숫자는 마지막 게시글 인덱스와 같도록
-                nextqna = get_object_or_404(QnA, index=index + 1, user=user)
-                return render(request, 'question.html', context={'qna': nextqna})  # 다음 qna 보여줌
-            else: # 마지막 게시글이라면 방명록 이동 버튼 존재하는 페이지로 이동
-                return render(request, 'toPost.html')
-        else:
-            return render(request, 'reply.html', context={'qna': qna})
+
+        if not index == 3: # 숫자는 마지막 게시글 인덱스와 같도록
+            nextqna = get_object_or_404(QnA, index=index + 1, user=user)
+
+            if index == 1: # colors 이미지 나오기 전 질문 인덱스 -> 2번 질문 답하면 colors1
+                return render(request, 'colors1.html', context={'qna': nextqna})  # 다음 qna 보여줌
+
+            return render(request, 'question.html', context={'qna': nextqna})  # 일반 질문일 경우 다음 qna 보여줌
+
+        else: # 마지막 게시글이라면 colors5로 이동
+            return render(request, 'colors5.html')
+
 
     return redirect('user:mainPage') # get요청시 메인 페이지로
 
@@ -87,6 +91,7 @@ def create_question(user):
     QnA.objects.create(index=1, question='질문2', user=user)
     QnA.objects.create(index=2, question='질문3', user=user)
     QnA.objects.create(index=3, question='질문4', user=user)
+    QnA.objects.create(index=4, question='질문5', user=user)
 
 
 

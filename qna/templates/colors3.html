@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>colors3</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'qna:show_question' qrecord=qna.index %}">
+        {% csrf_token %}
+        <button type="submit">다시 질문 페이지 돌아가기</button>
+    </form>
+</body>
+</html>
