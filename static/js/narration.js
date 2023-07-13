@@ -6,12 +6,19 @@ n4 = "누구나 그렇게 할 수<br/>있음에도 말이죠.";
 n5 = "당신은 나와 만나<br/>아주 드문 분이 되셨네요.";
 n6 = "지금부터<br/>당신을 둘러싼 모든 연결은<br/>끊어집니다.";
 n7 = "아무도 당신을 방해할 수<br/>없습니다.";
+n8 = "당신이 나에게<br/>더 많은 것을 얘기해줄 때<br/>나를 알게 되실 겁니다.";
+n9 = "이제 천천히<br/>나를 만나게 되실 거예요.";
 
 document.getElementById("text").innerHTML = n1;
 
 const load = () => {
   document.addEventListener("DOMContentLoaded", () => {
-    new TypeIt("#text", { speed: 50 })
+    new TypeIt("#text", {
+      speed: 50,
+      afterComplete: function (instance) {
+        instance.destroy();
+      },
+    })
       .pause(1000)
       .options({ speed: 50 })
       .empty({ delay: 500 })
@@ -33,11 +40,13 @@ const load = () => {
       .empty({ delay: 500 })
       .type(n7)
       .pause(1000)
+      .empty({ delay: 1000 })
+
       .go();
   });
 };
 
-const fadeIn = () => {
+const btnFadeIn = () => {
   var opacity = 0;
   var timerId = setInterval(function () {
     var div = document.getElementById("btnArea");
@@ -50,5 +59,34 @@ const fadeIn = () => {
   }, 200);
 };
 
+const ImageFade = () => {
+  var opacity = 0;
+  var increasing = true;
+
+  var timerId = setInterval(function () {
+    var image = document.getElementById("image");
+
+    image.style.opacity = opacity;
+
+    if (increasing) {
+      opacity += 0.1;
+      if (opacity >= 1) {
+        increasing = false;
+      }
+    } else {
+      opacity -= 0.1;
+      if (opacity <= 0) {
+        clearTimeout(timerId);
+      }
+    }
+  }, 200);
+};
+
+const load2 = () => {
+  new TypeIt("#text", { speed: 50 }).type(n8).pause(1000).empty().type(n9).go();
+};
+
 load();
-setTimeout(() => fadeIn(), 22500);
+setTimeout(() => ImageFade(), 22600);
+setTimeout(() => load2(), 27500);
+setTimeout(() => btnFadeIn(), 32000);
