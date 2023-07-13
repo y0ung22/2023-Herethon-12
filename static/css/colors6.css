@@ -1,0 +1,35 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("../../static/Image/mirrorbg.png");
+  background-size: cover;
+}
+#fade-out-box {
+  position: absolute;
+  width: 390px;
+  height: 808px;
+  background-image: url("../../static/Image/5.png");
+  background-size: cover;
+  animation: fadeout 3s;
+  -webkit-animation: fadeout 3s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
