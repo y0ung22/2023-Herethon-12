@@ -65,20 +65,19 @@ def show_answer(request, index):
 def start(request):
     user = request.user
 
-    if not user.is_authenticated:
-        return redirect('user:loginPage')  # 로그인하지 않으면 로그인창 이동, 로그인하면 질문
+    if user.is_authenticated:
+        if request.method == "POST":
 
-    if request.method == "POST":
+            if user.qrecord == 4:
+                return render(request, 'toPost.html')
 
-        if user.qrecord == 4:
-            return render(request, 'toPost.html')
+            if user.qrecord == 0: # 첫 사용자라면 나레이션으로
 
-        if user.qrecord == 0: # 첫 사용자라면 나레이션으로
-
-            return render(request, 'narration.html', context={'user': user})
-        else:
-            qna = get_object_or_404(QnA, index=user.qrecord, user=user)
-            return render(request, 'question.html', context={'qna': qna}) # 아니라면
+                return render(request, 'narration.html', context={'user': user})
+            else:
+                qna = get_object_or_404(QnA, index=user.qrecord, user=user)
+                return render(request, 'question.html', context={'qna': qna}) # 아니라면
+        return redirect('user:mainPage')  # get요청시 메인 페이지로
 
     return redirect('user:mainPage') # get요청시 메인 페이지로
 
