@@ -78,7 +78,14 @@ const ImageFade = () => {
       if (opacity >= 1) {
         increasing = false;
         setTimeout(function () {
+<<<<<<< HEAD
           increasing = true;
+=======
+          increasing = false;
+          setTimeout(function () {
+            increasing = true;
+          }, 1000);
+>>>>>>> ef76a914c9e9733545ecbae7324262d0c979c7e4
         }, 3000);
       }
     } else {
@@ -95,6 +102,11 @@ const load2 = () => {
 };
 
 load();
+<<<<<<< HEAD
 setTimeout(() => ImageFade(), 31000);
 setTimeout(() => load2(), 36000);
+=======
+setTimeout(() => ImageFade(), 30000);
+setTimeout(() => load2(), 35000);
+>>>>>>> ef76a914c9e9733545ecbae7324262d0c979c7e4
 setTimeout(() => btnFadeIn(), 41500);
