@@ -1,0 +1,52 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("../images/mirrorbg.png");
+  background-size: cover;
+}
+#textBox {
+  position: relative;
+  width: 222px;
+  height: 84px;
+  margin: auto;
+  top: 370px;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#goBtn {
+  position: relative;
+  width: 110px;
+  height: 29px;
+  top: 380px;
+  margin-left: 140px;
+  background-image: url("../images/label.png");
+  background-size: cover;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  outline: 0px;
+  border: 0px;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}

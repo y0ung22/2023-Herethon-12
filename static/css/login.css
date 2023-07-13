@@ -1,0 +1,74 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("../../static/images/loginbg.png");
+  background-size: cover;
+}
+#whiteBox {
+  position: relative;
+  width: 368.107px;
+  height: 522.779px;
+  margin: auto;
+  bottom: -124px;
+}
+#textBox {
+  position: relative;
+  margin: auto;
+  margin-left: 90px;
+  top: 70px;
+  width: 180px;
+  height: 66px;
+}
+#idLabel,
+#pwLabel {
+  position: relative;
+  width: 108px;
+  height: 29px;
+  margin: auto;
+  background-image: url("../../static/images/label.png");
+  background-size: cover;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+#idInput,
+#pwInput {
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+}
+#inputBox {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  top: 120px;
+  margin-bottom: 50px;
+}
+#loginBtn {
+  position: relative;
+  width: 108px;
+  height: 29px;
+  margin: auto;
+  margin-left: 130px;
+  margin-top: 140px;
+  background: #002b5b;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
