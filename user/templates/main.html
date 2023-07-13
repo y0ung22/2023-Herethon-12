@@ -1,20 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Main</title>
-    <link rel="stylesheet" href="../../static/css/main.css" />
+    <link rel="stylesheet" href="{% static '/css/main.css' %}" />
   </head>
   <body>
     <div id="container">
       <div id="click">거울 속을 눌러보세요</div>
-      <!-- {% if not user.is_staff %} -->
       <form method="POST" action="{% url 'qna:start' %}">
         <!-- 거울 속 클릭하면 서비스 시작 -->
-        <!-- {% csrf_token %} -->
+        {% csrf_token %}
         <button type="submit" id="ctitle">遊 泳</button>
       </form>
-      <!-- {% endif %} -->
       <div id="ktitle">유영</div>
       <div id="btnbox">
         <span id="loginBtn">
