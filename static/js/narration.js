@@ -51,4 +51,4 @@ const fadeIn = () => {
 };
 
 load();
-setTimeout(() => fadeIn(), 22000);
+setTimeout(() => fadeIn(), 22500);
