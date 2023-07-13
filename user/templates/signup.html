@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../../static/css/signup.css" />
+    <link rel="stylesheet" href="{% static '/css/signup.css' %}" />
   </head>
   <body>
     <div id="container">
       <div id="whiteBox">
         <img src="../../static/images/Register.png" id="textBox" />
         <form method="POST" action="{% url 'user:signup' %}">
-          <!-- {% csrf_token %} -->
+          {% csrf_token %}
           <div id="inputBox">
             <div id="idLabel">
               <span>아이디</span>
