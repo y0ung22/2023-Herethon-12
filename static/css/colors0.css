@@ -1,0 +1,15 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("../../static/Image/mirrorbg.png");
+  background-size: cover;
+}
+#color {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  background-image: url("../../static/Image/images/0.png");
+  background-size: cover;
+}

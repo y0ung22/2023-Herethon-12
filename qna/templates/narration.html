@@ -9,11 +9,12 @@
   </head>
   <body>
     <div id="container">
+      <img id="image" src="/static/Image/0.png" />
       <div class="narration"><p id="text"></p></div>
       <!-- 나레이션 마지막에 버튼 눌러서 qna_start.html로 이동 -->
       <div id="btnArea">
         <form method="POST" action="{% url 'qna:show_question' user.qrecord %}">
-           {% csrf_token %}
+          {% csrf_token %}
           <button id="startBtn" type="submit">
             <span>유영하러 가기</span>
           </button>
