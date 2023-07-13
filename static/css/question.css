@@ -1,5 +1,9 @@
 #container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 390px;
   height: 808px;
   margin: auto;
@@ -9,9 +13,8 @@
 #qtextBox {
   position: relative;
   width: 284px;
-  height: 84px;
-  top: 370px;
-  margin: auto;
+  height: 184;
+  margin-top: 60px;
   color: #000;
   text-align: center;
   font-family: Pretendard Variable;
@@ -24,8 +27,7 @@
   position: relative;
   width: 108px;
   height: 29px;
-  top: 430px;
-  margin-left: 140px;
+  margin-top: 50px;
   background-image: url("../images/label.png");
   background-size: cover;
   color: #f9f5eb;
