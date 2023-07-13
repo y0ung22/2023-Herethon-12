@@ -18,6 +18,11 @@
   justify-content: center;
 }
 
+#scroll {
+  height: 342px;
+  overflow: auto;
+}
+
 a {
   text-decoration: none;
 }

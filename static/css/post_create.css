@@ -61,6 +61,12 @@ button {
   background-color: transparent;
 }
 
+#box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #backBtn {
   width: 120px;
   height: 32px;
