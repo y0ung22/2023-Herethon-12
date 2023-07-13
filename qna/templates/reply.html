@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Qna Page</title>
-</head>
-<body>
-    <form method="POST" action="{% url 'qna:write_answer' index=qna.index %}">
-        {% csrf_token %}
-        <h3>질문</h3>
-        <h5>{{ qna.question }}</h5>
-        <h3>답변</h3>
-        <input type="textarea" name="answer" value="{{ qna.answer }}">
-        <button type="submit">완료하기</button>
-    </form>
-</body>
+    <link rel="stylesheet" href="../../static/css/reply.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form method="POST" action="{% url 'qna:write_answer' index=qna.index %}">
+        <!-- {% csrf_token %} -->
+        <div id="qtextBox">{{ qna.question }}</div>
+        <!--textarea로 수정했습니다-->
+        <textarea
+          name="answer"
+          value="{{ qna.answer }}"
+          id="content"
+        ></textarea>
+        <button type="submit" id="saveBtn">완료하기</button>
+      </form>
+    </div>
+  </body>
 </html>
