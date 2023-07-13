@@ -72,6 +72,12 @@ const ImageFade = () => {
       opacity += 0.05;
       if (opacity >= 1) {
         increasing = false;
+        setTimeout(function () {
+          increasing = false;
+          setTimeout(function () {
+            increasing = true;
+          }, 1000);
+        }, 2000);
       }
     } else {
       opacity -= 0.05;
