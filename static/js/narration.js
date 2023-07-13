@@ -78,10 +78,7 @@ const ImageFade = () => {
       if (opacity >= 1) {
         increasing = false;
         setTimeout(function () {
-          increasing = false;
-          setTimeout(function () {
-            increasing = true;
-          }, 1000);
+          increasing = true;
         }, 3000);
       }
     } else {
@@ -98,6 +95,6 @@ const load2 = () => {
 };
 
 load();
-setTimeout(() => ImageFade(), 30000);
-setTimeout(() => load2(), 35000);
+setTimeout(() => ImageFade(), 31000);
+setTimeout(() => load2(), 36000);
 setTimeout(() => btnFadeIn(), 41500);
