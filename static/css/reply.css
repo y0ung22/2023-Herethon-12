@@ -1,0 +1,48 @@
+#container {
+  position: relative;
+  width: 390px;
+  height: 808px;
+  margin: auto;
+  background-image: url("../images/basicbg.png");
+  background-size: cover;
+}
+#qtextBox {
+  position: relative;
+  width: 284px;
+  height: 84px;
+  top: 250px;
+  margin: auto;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#content {
+  position: relative;
+  top: 250px;
+  margin-left: 55px;
+  width: 275px;
+  height: 343px;
+  border: 1.5px solid #e83454;
+}
+#saveBtn {
+  position: relative;
+  width: 108px;
+  height: 29px;
+  top: 280px;
+  margin-left: 140px;
+  background-image: url("../images/label.png");
+  background-size: cover;
+  color: #f9f5eb;
+  text-align: center;
+  font-family: Pretendard Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  outline: 0px;
+  border: 0px;
+}
