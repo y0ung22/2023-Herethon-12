@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Details</title>
+</head>
+<body>
+    <div>{{ post.title }}</div>
+    <div>{{ post.writer.username }}</div>
+    <div>{{ post.content }}</div>
+    <div>작성시간: {{post.created_at}}</div>
+
+    <a href="http://127.0.0.1:8000/post">목록</a>
+</body>
