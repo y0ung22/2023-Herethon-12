@@ -7,66 +7,65 @@
     <link rel="stylesheet" href="{% static '/css/signup.css' %}" />
   </head>
   <body>
-    <div id="bigbg">
-      <div id="container">
-        <div id="goBack" style="position: absolute; top: 61px; left: 25px">
-          <a href="http://127.0.0.1:8000/"
-            ><img src="/static/Image/backBtn.png"
-          /></a>
-        </div>
-        <div id="whiteBox">
-          <img src="../../static/Image/Register.png" id="textBox" />
-          <form method="POST" action="{% url 'user:signup' %}">
-            {% csrf_token %}
-            <div id="inputBox">
-              <div id="idLabel">
-                <span>아이디</span>
-              </div>
-              <input
-                type="text"
-                name="username"
-                value="{{ form.username.value|default_if_none:'' }}"
-                id="idInput"
-              />
+    <div id="container">
+      <div id="goBack" style="position: absolute; top: 61px; left: 25px">
+        <a href="http://127.0.0.1:8000/"
+          ><img src="/static/Image/backBtn.png"
+        /></a>
+      </div>
+      <div id="whiteBox">
+        <img src="../../static/Image/Register.png" id="textBox" />
+        <form method="POST" action="{% url 'user:signup' %}">
+          {% csrf_token %}
+          <div id="inputBox">
+            <div id="idLabel">
+              <span>아이디</span>
             </div>
-            <div id="inputBox">
-              <div id="pwLabel">
-                <span>비밀번호1</span>
-              </div>
-              <input
-                type="password"
-                name="password1"
-                value="{{ form.password1.value|default_if_none:'' }}"
-                id="pwInput"
-              />
+            <input
+              type="text"
+              name="username"
+              value="{{ form.username.value|default_if_none:'' }}"
+              id="idInput"
+            />
+          </div>
+          <div id="inputBox">
+            <div id="pwLabel">
+              <span>비밀번호1</span>
             </div>
-            <div id="inputBox">
-              <div id="pwLabel">
-                <span>비밀번호2</span>
-              </div>
-              <input
-                type="password"
-                name="password2"
-                value="{{ form.password2.value|default_if_none:'' }}"
-                id="pwInput"
-              />
+            <input
+              type="password"
+              name="password1"
+              value="{{ form.password1.value|default_if_none:'' }}"
+              id="pwInput"
+            />
+          </div>
+          <div id="inputBox">
+            <div id="pwLabel">
+              <span>비밀번호2</span>
             </div>
-            <div id="inputBox">
-              <div id="pwLabel">
-                <span>이메일</span>
-              </div>
-              <input
-                type="text"
-                name="email"
-                value="{{ form.email.value|default_if_none:'' }}"
-                id="pwInput"
-              />
+            <input
+              type="password"
+              name="password2"
+              value="{{ form.password2.value|default_if_none:'' }}"
+              id="pwInput"
+            />
+          </div>
+          <div id="inputBox">
+            <div id="pwLabel">
+              <span>이메일</span>
             </div>
-            <button type="submit" id="registerBtn">회원가입</button>
-          </form>
-          {{ error }}
-        </div>
+            <input
+              type="text"
+              name="email"
+              value="{{ form.email.value|default_if_none:'' }}"
+              id="pwInput"
+            />
+          </div>
+          <button type="submit" id="registerBtn">회원가입</button>
+        </form>
+        <div id="errorMsg">{{ error }}</div>
       </div>
     </div>
+    <script src="/static/js/signup.js"></script>
   </body>
 </html>
