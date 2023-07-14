@@ -22,22 +22,25 @@ def write_answer(request, index):
         qna.save()
         user.save()
 
-        if not index == 31:  # 숫자는 마지막 게시글 인덱스와 같도록
-            nextqna = get_object_or_404(QnA, index=index + 1, user=user)
+        if qna.answer is None:
+            return render(request, 'reply.html', context={'qna': qna})
+        else:
+            if not index == 31:  # 숫자는 마지막 게시글 인덱스와 같도록
+                nextqna = get_object_or_404(QnA, index=index + 1, user=user)
 
-            if index == 3:  # colors 이미지 나오기 전 질문 인덱스 -> 4번 질문 답하면 colors1
-                return render(request, 'colors1.html', context={'qna': nextqna})  # 다음 qna 보여줌
-            if index == 14:  # colors 이미지 나오기 전 질문 인덱스 -> 15번 질문 답하면 colors2
-                return render(request, 'colors2.html', context={'qna': nextqna})
-            if index == 22:  # colors 이미지 나오기 전 질문 인덱스 -> 23번 질문 답하면 colors3
-                return render(request, 'colors3.html', context={'qna': nextqna})
-            if index == 28:  # colors 이미지 나오기 전 질문 인덱스 -> 29번 질문 답하면 colors4
-                return render(request, 'colors4.html', context={'qna': nextqna})
+                if index == 3:  # colors 이미지 나오기 전 질문 인덱스 -> 4번 질문 답하면 colors1
+                    return render(request, 'colors1.html', context={'qna': nextqna})  # 다음 qna 보여줌
+                if index == 14:  # colors 이미지 나오기 전 질문 인덱스 -> 15번 질문 답하면 colors2
+                    return render(request, 'colors2.html', context={'qna': nextqna})
+                if index == 22:  # colors 이미지 나오기 전 질문 인덱스 -> 23번 질문 답하면 colors3
+                    return render(request, 'colors3.html', context={'qna': nextqna})
+                if index == 28:  # colors 이미지 나오기 전 질문 인덱스 -> 29번 질문 답하면 colors4
+                    return render(request, 'colors4.html', context={'qna': nextqna})
 
-            return render(request, 'question.html', context={'qna': nextqna})  # 일반 질문일 경우 다음 qna 보여줌
+                return render(request, 'question.html', context={'qna': nextqna})  # 일반 질문일 경우 다음 qna 보여줌
 
-        else:  # 마지막 게시글이라면 colors5로 이동
-            return render(request, 'colors5.html')
+            else:  # 마지막 게시글이라면 colors5로 이동
+                return render(request, 'colors5.html')
 
     return redirect('user:mainPage') # get요청시 메인 페이지로
 
@@ -76,6 +79,7 @@ def start(request):
         if request.method == "POST":
             if user.qrecord == 32: # 모든 질문 답변 완료
                 user.is_staff = True
+                user.save()
                 return render(request, 'toPost.html')
 
             if user.qrecord == 0: # 첫 사용자라면 나레이션으로
