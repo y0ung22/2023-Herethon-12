@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +14,7 @@
           나는 여전히 당신이며<br />
           당신의 삶입니다.
         </div>
-        <form method="POST" action="{% url 'qna:start' %}">
+        <form method="POST" action="{% url 'qna:start' pIndex=7 %}">
           {% csrf_token %}
           <button type="submit" id="clickzone">toPost로 이동</button>
         </form>

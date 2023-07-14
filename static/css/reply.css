@@ -24,7 +24,8 @@
   position: relative;
   width: 284px;
   height: auto;
-  top: 200px;
+  top: 240px;
+  margin-bottom: 5px;
   color: #000;
   text-align: center;
   font-family: Pretendard Variable;
@@ -35,7 +36,7 @@
 }
 #content {
   position: relative;
-  top: 250px;
+  top: 260px;
   width: 275px;
   height: 343px;
   border: 1.5px solid #e83454;
@@ -46,8 +47,8 @@
   position: absolute;
   width: 108px;
   height: 29px;
-  bottom: 55px;
-  right: 140px;
+  bottom: 40px;
+  /* right: 140px; */
   background-image: url("../../static/Image/label.png");
   background-size: cover;
   color: #f9f5eb;
@@ -59,4 +60,9 @@
   line-height: 30px;
   outline: 0px;
   border: 0px;
+  background-color: white;
+}
+#box {
+  display: flex;
+  justify-content: center;
 }

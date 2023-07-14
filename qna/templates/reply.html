@@ -4,20 +4,27 @@
   <head>
     <meta charset="UTF-8" />
     <title>Qna Page</title>
-    <link rel="stylesheet" href="../../static/css/reply.css" />
+    <link rel="stylesheet" href="{% static '/css/reply.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <form method="POST" action="{% url 'qna:write_answer' index=qna.index %}">
-        {% csrf_token %}
-        <div id="qtextBox">{{ qna.question }}</div>
-        <textarea
-          name="answer"
-          value="{{ qna.answer }}"
-          id="content"
-        ></textarea>
-        <button type="submit" id="saveBtn">완료하기</button>
-      </form>
+    <div id="bigbg">
+      <div id="container">
+        <form
+          method="POST"
+          action="{% url 'qna:write_answer' index=qna.index %}"
+        >
+          {% csrf_token %}
+          <div id="qtextBox">{{ qna.question }}</div>
+          <textarea
+            name="answer"
+            value="{{ qna.answer }}"
+            id="content"
+          ></textarea>
+          <div id="box">
+            <button type="submit" id="saveBtn">완료하기</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
