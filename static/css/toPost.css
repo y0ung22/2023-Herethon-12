@@ -1,3 +1,11 @@
+#bigbg {
+  position: relative;
+  width: auto;
+  height: 808px;
+  margin: auto;
+  background-image: url("../../static/Image/bigbg.png");
+  background-size: cover;
+}
 #container {
   position: relative;
   width: 390px;
