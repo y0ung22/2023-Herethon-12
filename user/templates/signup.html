@@ -50,17 +50,6 @@
               id="pwInput"
             />
           </div>
-          <div id="inputBox">
-            <div id="pwLabel">
-              <span>이메일</span>
-            </div>
-            <input
-              type="text"
-              name="email"
-              value="{{ form.email.value|default_if_none:'' }}"
-              id="pwInput"
-            />
-          </div>
           <button type="submit" id="registerBtn">회원가입</button>
         </form>
         <div id="errorMsg" style="visibility: hidden">{{ error }}</div>
