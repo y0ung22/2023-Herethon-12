@@ -24,8 +24,6 @@
   <br>
 </p>
 
-목차
-
 ## 프로젝트 소개
 
 <p align="justify">
