@@ -14,7 +14,7 @@
       </div>
     </div>
       <div>
-        <form method="POST" action="{% url 'qna:start' %}">
+        <form method="POST" action="{% url 'qna:toPage' pIndex=7 %}">
           {% csrf_token %}
           <button type="submit">toPost로 이동</button>
         </form>
