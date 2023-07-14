@@ -33,7 +33,6 @@ def signup(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)  # 사용자 인증
-            post_save.send(sender=User, instance=user, created=True)
 
             login(request, user)  # 로그인
 

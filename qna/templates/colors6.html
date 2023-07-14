@@ -11,6 +11,11 @@
     <div id="container">
       <div id="fade-out-box"></div>
     </div>
-    <script src="{% static '/js/colors6.js' %}"></script>
+    <div>
+        <form method="POST" action="{% url 'qna:toPage' pIndex=6 %}">
+          {% csrf_token %}
+          <button type="submit">ending 으로 이동</button>
+        </form>
+    </div>
   </body>
 </html>

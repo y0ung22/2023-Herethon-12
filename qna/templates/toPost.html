@@ -16,7 +16,10 @@
         확인해보실래요?
       </div>
       <div id="goBtn">
-        <a href="http://127.0.0.1:8000/post/">방명록 작성하기</a>
+        <form method="POST" action="{% url 'post:post_list' %}">
+          {% csrf_token %}
+          <button type="submit">방명록으로 이동</button>
+        </form>
       </div>
     </div>
   </body>
