@@ -45,16 +45,25 @@ Evironment : <img src="https://img.shields.io/badge/github-181717?style=for-the-
 <br>
 
 ## 파일 구조도
-'''
-.idea
- ┣ inspectionProfiles
- ┃ ┗ profiles_settings.xml
- ┣ .gitignore
- ┣ 2023-Herethon-12.iml
- ┣ misc.xml
- ┣ modules.xml
- ┗ vcs.xml
-'''
+  ```
+  📂 all_project
+  └─ my_project
+   ├─ my_project
+   │  ├─ __init__.py
+   │  ├─ asgi.py
+   │  ├─ settings.py
+   │  ├─ urls.py
+   │  └─ wsgi.py
+   ├─ myapp/
+   │  ├─ __init__.py
+   │  ├─ admin.py
+   │  ├─ apps.py
+   │  ├─ models.py
+   │  ├─ tests.py
+   │  └─ views.py
+   └─ manage.py
+  ```
+
 
 <br>
 
