@@ -7,13 +7,16 @@ from post.models import Post
 
 # 전체 게시글 조회
 def post_list(request):
-    posts = Post.objects.all()
-    return render(request, 'post_list.html', context={'posts': posts})
+    if request.user.is_staff:
+        posts = Post.objects.all()
+        return render(request, 'post_list.html', context={'posts': posts})
+
+    return redirect('user:mainPage')
 
 # 게시글 생성
 def post_create(request):
     if not request.user.is_authenticated:
-        return redirect('user:loginPage')
+        return redirect('user:mainPage')
 
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -33,7 +36,7 @@ def post_create(request):
 # 상세 게시글 조회
 def post_detail(request, pk):
     if not request.user.is_authenticated:
-        return redirect('user:loginPage')
+        return redirect('user:mainPage')
 
     post = Post.objects.get(pk=pk)
     return render(request, 'post_detail.html', context={'post': post})

@@ -9,9 +9,8 @@
   <body>
     <div id="container">
       <form method="POST" action="{% url 'qna:write_answer' index=qna.index %}">
-         {% csrf_token %}
+        {% csrf_token %}
         <div id="qtextBox">{{ qna.question }}</div>
-        <!--textarea로 수정했습니다-->
         <textarea
           name="answer"
           value="{{ qna.answer }}"
