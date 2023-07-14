@@ -17,12 +17,14 @@ def write_answer(request, index):
 
         # 데이터 변경
         qna.answer = answer
-        user.qrecord = index+1
+        user.qrecord = index + 1
 
         qna.save()
         user.save()
 
-        if qna.answer is None:
+        modifyQna = get_object_or_404(QnA, index=index, user=user)
+
+        if modifyQna.answer is None:
             return render(request, 'reply.html', context={'qna': qna})
         else:
             if not index == 31:  # 숫자는 마지막 게시글 인덱스와 같도록

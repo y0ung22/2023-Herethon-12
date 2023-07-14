@@ -1,3 +1,4 @@
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.hashers import make_password
 from django.shortcuts import render, redirect
 
@@ -42,33 +43,63 @@ def signupPage(request):
 #         form = UserForm()
 #     return render(request, 'signup.html', {'form': form})
 
-# 회원가입
+
+def custom_login(request):
+    if request.method == "GET":
+        return (request, 'login.html')
+
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        if not (username and password):
+            err_data = '모든 항목을 입력해주세요.'
+            return render(request, 'login.html', context={'error': err_data})
+
+        if not User.objects.all().filter(username=username).exists() == True: # username이 존재하지 않는다면
+            err_data = '존재하지 않는 아이디입니다.'
+            return render(request, 'login.html', context={'error': err_data})
+
+        else: # 아이디가 존재하면
+            existUser = User.objects.get(username=username)
+
+            if not password == existUser.password: # 입력한 username을 가진 기존 User 객체의 password와 입력한 pssword가 다르다면
+                err_data = '비밀번호를 잘못 입력하였습니다.'
+                return render(request, 'login.html', context={'error': err_data})
+            else: # 비밀번호가 같으면
+                #user = authenticate(request, username=username, password=password)
+                login(request, authenticate(request, username=username, password=password)) # 로그인
+                return redirect('user:mainPage')
+
 def signup(request):
     if request.method == "GET":
         return (request, 'signup.html')
+
     elif request.method == "POST":
         username = request.POST.get('username', None)
         password1 = request.POST.get('password1', None)
         password2 = request.POST.get('password2', None)
-        email = request.POST.get('email', None)
+
         user = User(
             username=username,
-            password=make_password(password1),
+            password=password1,
         )
-        if not (username and email and password1 and password2):
+        if not (username and password1 and password2):
             err_data = '모든 항목을 입력해주세요.'
             return render(request, 'signup.html', context={'error': err_data})
 
-        if User.objects.all().filter(username=request.POST.get('username', None)).exists() == True:
+        if User.objects.all().filter(username=username).exists() == True:
             err_data = '이미 존재하는 아이디입니다.'
             return render(request, 'signup.html', context={'error': err_data})
 
         if password1 != password2:
             err_data = '비밀번호가 다릅니다.'
             return render(request, 'signup.html', context={'error': err_data})
+
         else:
             user.save()
             create_question(user)
+
             return redirect('user:mainPage')
 
 
