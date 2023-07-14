@@ -11,11 +11,9 @@
     <div id="container">
       <div id="color">
         <div id="fade-out-box"></div>
-      </div>
-      <div>
         <form method="POST" action="{% url 'qna:toPage' pIndex=5 %}">
           {% csrf_token %}
-          <button type="submit">colors6으로 이동</button>
+          <button type="submit" id="clickzone">colors6으로 이동</button>
         </form>
       </div>
     </div>
