@@ -41,8 +41,8 @@
 #idLabel,
 #pwLabel {
   position: relative;
-  width: 108px;
-  height: 29px;
+  width: 115px;
+  height: auto;
   margin: auto;
   background-image: url("../../static/Image/label.png");
   background-size: cover;
