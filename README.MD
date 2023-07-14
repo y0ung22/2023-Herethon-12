@@ -38,7 +38,10 @@ GIF Images
 
 <br>
 
-##팀원 소개
+## 팀원 소개
+
+![Group 1](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/ee46ac19-066e-42b7-829e-125b5aff6516)
+
 
 
 
