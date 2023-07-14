@@ -45,6 +45,7 @@ Evironment : <img src="https://img.shields.io/badge/github-181717?style=for-the-
 <br>
 
 ## 파일 구조도
+'''
 .idea
  ┣ inspectionProfiles
  ┃ ┗ profiles_settings.xml
@@ -53,6 +54,7 @@ Evironment : <img src="https://img.shields.io/badge/github-181717?style=for-the-
  ┣ misc.xml
  ┣ modules.xml
  ┗ vcs.xml
+'''
 
 <br>
 
