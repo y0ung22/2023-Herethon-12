@@ -8,9 +8,14 @@
   </head>
   <body>
     <div id="container">
+      <button id="toMain">
+        <a href="http://127.0.0.1:8000/"
+          ><img src="/static/Image/mainBtn.png" /</a
+        >
+      </button>
       <div id="qtextBox">{{ qna.question }}</div>
       <form method="POST" action="{% url 'qna:show_answer' index=qna.index %}">
-         {% csrf_token %}
+        {% csrf_token %}
         <button type="submit" id="goReplyBtn">답변하기</button>
       </form>
     </div>
