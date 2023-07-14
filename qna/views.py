@@ -22,9 +22,8 @@ def write_answer(request, index):
         qna.save()
         user.save()
 
-        modifyQna = get_object_or_404(QnA, index=index, user=user)
 
-        if modifyQna.answer is None:
+        if qna.answer == '':
             return render(request, 'reply.html', context={'qna': qna})
         else:
             if not index == 31:  # 숫자는 마지막 게시글 인덱스와 같도록
