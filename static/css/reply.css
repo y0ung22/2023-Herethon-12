@@ -27,6 +27,8 @@
   width: 275px;
   height: 343px;
   border: 1.5px solid #e83454;
+  resize: none;
+  font-size: 24px;
 }
 #saveBtn {
   position: relative;
