@@ -13,6 +13,12 @@
         당신의 삶입니다.
       </div>
     </div>
-    <script src="../../static/js/ending.js"></script>
+      <div>
+        <form method="POST" action="{% url 'qna:start' %}">
+          {% csrf_token %}
+          <button type="submit">toPost로 이동</button>
+        </form>
+      </div>
+
   </body>
 </html>
