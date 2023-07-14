@@ -1,5 +1,8 @@
 #bigbg {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: auto;
   height: 808px;
   margin: auto;
@@ -10,6 +13,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 390px;
   height: 808px;
   margin: auto;
@@ -20,9 +24,8 @@
   position: relative;
   width: 284px;
   height: auto;
-  top: 200px;
-  margin-bottom: 15px;
-  margin: auto;
+  top: 240px;
+  margin-bottom: 5px;
   color: #000;
   text-align: center;
   font-family: Pretendard Variable;
@@ -33,8 +36,7 @@
 }
 #content {
   position: relative;
-  top: 250px;
-  margin-left: 55px;
+  top: 260px;
   width: 275px;
   height: 343px;
   border: 1.5px solid #e83454;
@@ -42,11 +44,11 @@
   font-size: 24px;
 }
 #saveBtn {
-  position: relative;
+  position: absolute;
   width: 108px;
   height: 29px;
-  top: 280px;
-  margin-left: 140px;
+  bottom: 40px;
+  /* right: 140px; */
   background-image: url("../../static/Image/label.png");
   background-size: cover;
   color: #f9f5eb;
@@ -58,4 +60,9 @@
   line-height: 30px;
   outline: 0px;
   border: 0px;
+  background-color: white;
+}
+#box {
+  display: flex;
+  justify-content: center;
 }
