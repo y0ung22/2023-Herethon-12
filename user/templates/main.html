@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="{% static '/css/main.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="click">거울 속을 눌러보세요</div>
-      <form method="POST" action="{% url 'qna:start' %}">
-        {% csrf_token %}
-        <!-- 거울 속 클릭하면 서비스 시작 -->
-        <button type="submit" id="ctitle">遊 泳</button>
-      </form>
-      <div id="ktitle">유영</div>
-      <div id="btnbox">
-        <span id="loginBtn">
-          <a href="http://127.0.0.1:8000/loginPage/">로그인</a></span
-        >
-        <span>|</span>
-        <span id="registerBtn">
-          <a href="http://127.0.0.1:8000/signupPage/">회원가입</a></span
-        >
+    <div id="bigbg">
+      <div id="container">
+        <div id="click">거울 속을 눌러보세요</div>
+        <form method="POST" action="{% url 'qna:start' %}">
+          {% csrf_token %}
+          <!-- 거울 속 클릭하면 서비스 시작 -->
+          <button type="submit" id="ctitle">遊 泳</button>
+        </form>
+        <div id="ktitle">유영</div>
+        <div id="btnbox">
+          <span id="loginBtn">
+            <a href="http://127.0.0.1:8000/loginPage/">로그인</a></span
+          >
+          <span>|</span>
+          <span id="registerBtn">
+            <a href="http://127.0.0.1:8000/signupPage/">회원가입</a></span
+          >
+        </div>
       </div>
     </div>
   </body>
