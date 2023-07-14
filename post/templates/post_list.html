@@ -9,32 +9,30 @@
   <body>
     <div id="container">
       <img src="/static/Image/GuestBook.png" id="textBox" />
-      <div id="scroll">
-        {% for post in posts %}
-        <div id="guest-list">
-          <div id="text">
-            <div id="title">
-              <a href="{% url 'post:post_detail' pk=post.pk%}"
-                >{{ post.title }}</a
-              >
-            </div>
-            <div id="username">{{ post.writer.username }}</div>
+      {% for post in posts %}
+      <div id="guest-list">
+        <div id="text">
+          <div id="title">
+            <a href="{% url 'post:post_detail' pk=post.pk%}"
+              >{{ post.title }}</a
+            >
           </div>
-          {% if request.user == post.writer %}
-          <div id="btn">
-            <form method="GET" action="{% url 'post:post_edit' pk=post.pk %}">
-              <button button type="submit">
-                <img id="pencil" src="/static/Image/pencil.png" />
-              </button>
-            </form>
-            <form method="GET" action="{% url 'post:post_delete' pk=post.pk %}">
-              <button type="submit">
-                <img id="trashcan" src="/static/Image/trashcan.png" />
-              </button>
-            </form>
-          </div>
-          {% endif %}
+          <div id="username">{{ post.writer.username }}</div>
         </div>
+        {% if request.user == post.writer %}
+        <div id="btn">
+          <form method="GET" action="{% url 'post:post_edit' pk=post.pk %}">
+            <button button type="submit">
+              <img id="pencil" src="/static/Image/pencil.png" />
+            </button>
+          </form>
+          <form method="GET" action="{% url 'post:post_delete' pk=post.pk %}">
+            <button type="submit">
+              <img id="trashcan" src="/static/Image/trashcan.png" />
+            </button>
+          </form>
+        </div>
+        {% endif %}
       </div>
       {% endfor %}
       <div id="writeBtn">
