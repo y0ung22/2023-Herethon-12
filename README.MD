@@ -36,33 +36,9 @@ GIF Images
 
 ##팀원 소개
 
-<table border="" cellspacing="0" cellpadding="0" width="100%">
-  <tr width="100%">
-  <td align="center">이성경</a></td>
-  <td align="center">김가영</a></td>
-  <td  align="center">박소정</a></td>
-    <td  align="center">문수호</a></td>
-    <td  align="center">최유신</a></td>
-  </tr>
-  <tr width="100%">
-  <td  align="center"><img src="![이성경](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/0f4e8e55-ea3b-46dc-90eb-61666e4c2da3)
-" alt="image" border="0" width = "90px"></a></td>
-  <td  align="center"><img src="![김가영](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/62aba409-c7e8-42bf-8291-8515256f7a56)" alt="image" border="0" width = "90px"></a></td>
-  <td  align="center"><img src="![박소정](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/0ca973e6-ec34-464c-857b-91b37a0dae1a)
-" alt="image" border="0" width="90px"></a></td>
-    <td  align="center"><img src="![문수호](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/fc57fd55-c811-41cf-a838-e00db121cf4b)
-" alt="image" border="0" width="90px"></a></td>
-  <td  align="center"><img src="![최유신](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/2f08d9c6-7f6b-4be3-a1a4-c615fbc5daf2)
-" alt="image" border="0" width="90px"></a></td>
-  </tr>
-  <tr width="100%">
-  <td  align="center">프론트엔드</td>
-    <td  align="center">프론트엔드</td>
-  <td  align="center">프론트엔드</td>
-  <td  align="center">백엔드</td>
-    <td  align="center">백엔드</td>
-     </tr>
-  </table>
+|    이성경     |  김가영  |  박소정  | 문수호 | 최유신 |
+| :-----------: | :------: | :------: | :----: | :----: |
+| _기획&디자인_ | _프론트_ | _프론트_ |  _백_  |  _백_  |
 
 <br>
 
