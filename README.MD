@@ -48,6 +48,7 @@ GIF Images
      <img src="./images/face/yushin.png">
 ## 구현 기능
 
+<img src="./images/face/design.png">
 ### 기능 1
 
 ### 기능 2
