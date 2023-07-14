@@ -10,6 +10,7 @@
   background-image: url("../../static/Image/basicbg.png");
   background-size: cover;
 }
+
 #qtextBox {
   position: relative;
   width: 284px;
@@ -23,6 +24,17 @@
   font-weight: 600;
   line-height: normal;
 }
+
+#toMain {
+  width: 41px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 61px;
+  right: 25px;
+}
+
 #goReplyBtn {
   position: relative;
   width: 108px;
