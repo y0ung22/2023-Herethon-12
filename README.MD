@@ -31,6 +31,7 @@ GIF Images
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
 <!-- | JavaScript |    HTML    |   CSS    |  Node   |  Node   |
 | :--------: | :--------: | :------: | :-----: | :-----: |
@@ -38,6 +39,13 @@ GIF Images
 
 <br>
 
+## 팀원 소개
+
+  <img src="./images/face/seongyeong.png">
+ <img src="./images/face/gayoung.png">
+  <img src="./images/face/sojeong.png">
+  <img src="./images/face/suho.png">
+     <img src="./images/face/yushin.png">
 ## 구현 기능
 
 ### 기능 1
