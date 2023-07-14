@@ -10,6 +10,16 @@
   align-items: center;
 }
 
+#toMain {
+  width: 41px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 61px;
+  right: 25px;
+}
+
 #textBox {
   margin-top: 210px;
   margin-bottom: 20px;

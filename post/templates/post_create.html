@@ -8,6 +8,11 @@
   </head>
   <body>
     <div id="container">
+      <div id="toMain" style="position: absolute; top: 61px; right: 25px">
+        <a href="http://127.0.0.1:8000/"
+          ><img src="/static/Image/mainBtn.png"
+        /></a>
+      </div>
       <img src="/static/Image/write.png" id="textBox" />
       <form method="POST">
         {% csrf_token %}
