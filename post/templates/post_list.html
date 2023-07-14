@@ -7,41 +7,43 @@
     <link rel="stylesheet" href="/static/css/post_list.css" />
   </head>
   <body>
-    <div id="container">
-      <div id="toMain" style="position: absolute; top: 61px; left: 25px">
-        <a href="http://127.0.0.1:8000/"
-          ><img src="/static/Image/mainBtn.png"
-        /></a>
-      </div>
-      <img src="/static/Image/GuestBook.png" id="textBox" />
-      {% for post in posts %}
-      <div id="guest-list">
-        <div id="text">
-          <div id="title">
-            <a href="{% url 'post:post_detail' pk=post.pk%}"
-              >{{ post.title }}</a
-            >
+    <div id="bigbg">
+      <div id="container">
+        <div id="toMain" style="position: absolute; top: 61px; left: 25px">
+          <a href="http://127.0.0.1:8000/"
+            ><img src="/static/Image/mainBtn.png"
+          /></a>
+        </div>
+        <img src="/static/Image/GuestBook.png" id="textBox" />
+        {% for post in posts %}
+        <div id="guest-list">
+          <div id="text">
+            <div id="title">
+              <a href="{% url 'post:post_detail' pk=post.pk%}"
+                >{{ post.title }}</a
+              >
+            </div>
+            <div id="username">{{ post.writer.username }}</div>
           </div>
-          <div id="username">{{ post.writer.username }}</div>
+          {% if request.user == post.writer %}
+          <div id="btn">
+            <form method="GET" action="{% url 'post:post_edit' pk=post.pk %}">
+              <button button type="submit">
+                <img id="pencil" src="/static/Image/pencil.png" />
+              </button>
+            </form>
+            <form method="GET" action="{% url 'post:post_delete' pk=post.pk %}">
+              <button type="submit">
+                <img id="trashcan" src="/static/Image/trashcan.png" />
+              </button>
+            </form>
+          </div>
+          {% endif %}
         </div>
-        {% if request.user == post.writer %}
-        <div id="btn">
-          <form method="GET" action="{% url 'post:post_edit' pk=post.pk %}">
-            <button button type="submit">
-              <img id="pencil" src="/static/Image/pencil.png" />
-            </button>
-          </form>
-          <form method="GET" action="{% url 'post:post_delete' pk=post.pk %}">
-            <button type="submit">
-              <img id="trashcan" src="/static/Image/trashcan.png" />
-            </button>
-          </form>
+        {% endfor %}
+        <div id="writeBtn">
+          <a href="http://127.0.0.1:8000/post/create">작성하기</a>
         </div>
-        {% endif %}
-      </div>
-      {% endfor %}
-      <div id="writeBtn">
-        <a href="http://127.0.0.1:8000/post/create">작성하기</a>
       </div>
     </div>
   </body>
