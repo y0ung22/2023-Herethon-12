@@ -9,38 +9,35 @@ from user.models import User
 
 # 메인 페이지
 def mainPage(request):
-    #return render(request, 'user/main.html')
     return render(request, 'main.html')
 
 # 로그인 페이지
 def loginPage(request):
-    #return render(request, 'user/main.html')
     return render(request, 'login.html')
 
 # 회원가입 페이지
 def signupPage(request):
-    #return render(request, 'user/main.html')
     return render(request, 'signup.html')
 
 # 로그인
-def login(request):
-    if request.method =='GET':
-        return render(request, 'login.html')
-    elif request.method == 'POST':
-        username = request.POST.get('username', None)
-        password = request.POST.get('password', None)
-
-        err_data = {}
-        if not(username and password):
-            err_data['error'] = '모든 값을 입력해 주세요.'
-        else:
-            user = User.objects.get(username=username)
-            if check_password(password, user.password):
-                request.session['user'] = user.id
-                return redirect('user:mainPage')
-            else:
-                err_data['error'] = '아이디 또는 비밀번호가 일치하지 않습니다.'
-        return render(request, 'login.html', err_data)
+# def login(request):
+#     if request.method =='GET':
+#         return render(request, 'login.html')
+#     elif request.method == 'POST':
+#         username = request.POST.get('username', None)
+#         password = request.POST.get('password', None)
+#
+#         err_data = {}
+#         if not(username and password):
+#             err_data['error'] = '모든 값을 입력해 주세요.'
+#         else:
+#             user = User.objects.get(username=username)
+#             if check_password(password, user.password):
+#                 request.session['user'] = user.id
+#                 return redirect('user:mainPage')
+#             else:
+#                 err_data['error'] = '비밀번호가 일치하지 않습니다.'
+#         return render(request, 'login.html', err_data)
 
 def signup(request):
     if request.method == "GET":
