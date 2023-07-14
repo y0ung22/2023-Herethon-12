@@ -2,7 +2,7 @@
 
 2023 여기톤 : HERETHON 12조
 
-### 서비스 소개
+## 서비스 소개
 
 #### 여성의 삶을 둘러싼 구조적, 문화적 원인에 의해 정신 건강 질환에 취약해진
 
@@ -18,24 +18,6 @@
 
 #### 천천히 하나씩 질문에 대답해보세요.
 
-<p align="center">
-  <br>
-  <img src="./images/common/logo-sample.jpeg">
-  <br>
-</p>
-
-
-## 프로젝트 소개
-
-<p align="justify">
-프로젝트 개요/동기
-</p>
-
-<p align="center">
-GIF Images
-</p>
-
-<br>
 
 ## 팀원 소개
 
