@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="{% static '/css/login.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="whiteBox">
-        <img src="../../static/Image/Login.png" id="textBox" />
-        <form method="POST" action="{% url 'user:login' %}">
-          {% csrf_token %}
-          <div id="inputBox">
-            <div id="idLabel">
-              <span>아이디</span>
+    <div id="bigbg">
+      <div id="container">
+        <div id="whiteBox">
+          <img src="../../static/Image/Login.png" id="textBox" />
+          <form method="POST" action="{% url 'user:login' %}">
+            {% csrf_token %}
+            <div id="inputBox">
+              <div id="idLabel">
+                <span>아이디</span>
+              </div>
+              <input
+                type="text"
+                name="username"
+                value="{{ form.username.value|default_if_none:'' }}"
+                id="idInput"
+              />
             </div>
-            <input
-              type="text"
-              name="username"
-              value="{{ form.username.value|default_if_none:'' }}"
-              id="idInput"
-            />
-          </div>
-          <div id="inputBox">
-            <div id="pwLabel">
-              <span>비밀번호</span>
+            <div id="inputBox">
+              <div id="pwLabel">
+                <span>비밀번호</span>
+              </div>
+              <input
+                type="password"
+                name="password"
+                value="{{ form.password.value|default_if_none:'' }}"
+                id="pwInput"
+              />
             </div>
-            <input
-              type="password"
-              name="password"
-              value="{{ form.password.value|default_if_none:'' }}"
-              id="pwInput"
-            />
-          </div>
-          <button type="submit" id="loginBtn">로그인</button>
-        </form>
+            <button type="submit" id="loginBtn">로그인</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="{% static '/css/ending.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="textBox">
-        나는 여전히 당신이며<br />
-        당신의 삶입니다.
+    <div id="bigbg">
+      <div id="container">
+        <div id="textBox">
+          나는 여전히 당신이며<br />
+          당신의 삶입니다.
+        </div>
+        <form method="POST" action="{% url 'qna:start' %}">
+          {% csrf_token %}
+          <button type="submit" id="clickzone">toPost로 이동</button>
+        </form>
       </div>
-      <form method="POST" action="{% url 'qna:start' %}">
-        {% csrf_token %}
-        <button type="submit" id="clickzone">toPost로 이동</button>
-      </form>
     </div>
   </body>
 </html>

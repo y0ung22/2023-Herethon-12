@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="{% static '/css/colors6.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="fade-out-box"></div>
-      <form method="POST" action="{% url 'qna:toPage' pIndex=6 %}">
-        {% csrf_token %}
-        <button type="submit" id="clickzone">ending 으로 이동</button>
-      </form>
+    <div id="bigbg">
+      <div id="container">
+        <div id="fade-out-box"></div>
+        <form method="POST" action="{% url 'qna:toPage' pIndex=6 %}">
+          {% csrf_token %}
+          <button type="submit" id="clickzone">ending 으로 이동</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
