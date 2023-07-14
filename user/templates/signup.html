@@ -9,6 +9,11 @@
   <body>
     <div id="bigbg">
       <div id="container">
+        <div id="goBack" style="position: absolute; top: 61px; left: 25px">
+          <a href="http://127.0.0.1:8000/"
+            ><img src="/static/Image/backBtn.png"
+          /></a>
+        </div>
         <div id="whiteBox">
           <img src="../../static/Image/Register.png" id="textBox" />
           <form method="POST" action="{% url 'user:signup' %}">
@@ -59,6 +64,7 @@
             </div>
             <button type="submit" id="registerBtn">회원가입</button>
           </form>
+          {{ error }}
         </div>
       </div>
     </div>
