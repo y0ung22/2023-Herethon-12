@@ -22,7 +22,7 @@ def write_answer(request, index):
         qna.save()
         user.save()
 
-        if not index == 32:  # 숫자는 마지막 게시글 인덱스와 같도록
+        if not index == 31:  # 숫자는 마지막 게시글 인덱스와 같도록
             nextqna = get_object_or_404(QnA, index=index + 1, user=user)
 
             if index == 3:  # colors 이미지 나오기 전 질문 인덱스 -> 4번 질문 답하면 colors1
@@ -88,6 +88,17 @@ def start(request):
 
     return redirect('user:mainPage') # get요청시 메인 페이지로
 
+def toPage(request, pIndex):
+
+    if request.method == 'POST':
+        if pIndex == 5: # colors5.html 이라면
+            return render(request, 'colors6.html')
+        if pIndex == 6: # colors6.html 이라면
+            return render(request, 'ending.html')
+        if pIndex == 7: # ending.html 이라면
+            return render(request, 'toPost.html')
+
+    return redirect('user:mainPage')
 
 # QnA 객체 생성
 def create_question(user):
