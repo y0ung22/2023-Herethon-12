@@ -44,15 +44,15 @@ Evironment : <img src="https://img.shields.io/badge/github-181717?style=for-the-
 
 <br>
 
-## 구현 기능
-
-### 기능 1
-
-### 기능 2
-
-### 기능 3
-
-### 기능 4
+## 파일 구조도
+.idea
+ ┣ inspectionProfiles
+ ┃ ┗ profiles_settings.xml
+ ┣ .gitignore
+ ┣ 2023-Herethon-12.iml
+ ┣ misc.xml
+ ┣ modules.xml
+ ┗ vcs.xml
 
 <br>
 
