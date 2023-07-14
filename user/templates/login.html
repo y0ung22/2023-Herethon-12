@@ -7,41 +7,42 @@
     <link rel="stylesheet" href="{% static '/css/login.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="goBack" style="position: absolute; top: 61px; right: 25px">
-        <a href="http://127.0.0.1:8000/"
-          ><img src="/static/Image/backBtn.png"
-        /></a>
-      </div>
-      <div id="whiteBox">
-        <img src="../../static/Image/Login.png" id="textBox" />
-        <form method="POST" action="{% url 'user:custom_login' %}">
-          {% csrf_token %}
-          <div id="inputBox">
-            <div id="idLabel">
-              <span>아이디</span>
+    <div id="bigbg">
+      <div id="container">
+        <div id="goBack" style="position: absolute; top: 61px; left: 25px">
+          <a href="http://127.0.0.1:8000/"
+            ><img src="/static/Image/backBtn.png"
+          /></a>
+        </div>
+        <div id="whiteBox">
+          <img src="../../static/Image/Login.png" id="textBox" />
+          <form method="POST" action="{% url 'user:login' %}">
+            {% csrf_token %}
+            <div id="inputBox">
+              <div id="idLabel">
+                <span>아이디</span>
+              </div>
+              <input
+                type="text"
+                name="username"
+                value="{{ form.username.value|default_if_none:'' }}"
+                id="idInput"
+              />
             </div>
-            <input
-              type="text"
-              name="username"
-              value="{{ form.username.value|default_if_none:'' }}"
-              id="idInput"
-            />
-          </div>
-          <div id="inputBox">
-            <div id="pwLabel">
-              <span>비밀번호</span>
+            <div id="inputBox">
+              <div id="pwLabel">
+                <span>비밀번호</span>
+              </div>
+              <input
+                type="password"
+                name="password"
+                value="{{ form.password.value|default_if_none:'' }}"
+                id="pwInput"
+              />
             </div>
-            <input
-              type="password"
-              name="password"
-              value="{{ form.password.value|default_if_none:'' }}"
-              id="pwInput"
-            />
-          </div>
-          <button type="submit" id="loginBtn">로그인</button>
-          {{ error }}
-        </form>
+            <button type="submit" id="loginBtn">로그인</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

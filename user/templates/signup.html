@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="container">
-      <div id="goBack" style="position: absolute; top: 61px; right: 25px">
+      <div id="goBack" style="position: absolute; top: 61px; left: 25px">
         <a href="http://127.0.0.1:8000/"
           ><img src="/static/Image/backBtn.png"
         /></a>
@@ -63,8 +63,9 @@
           </div>
           <button type="submit" id="registerBtn">회원가입</button>
         </form>
-        {{ error }}
+        <div id="errorMsg" style="visibility: hidden">{{ error }}</div>
       </div>
     </div>
+    <script src="/static/js/signup.js"></script>
   </body>
 </html>

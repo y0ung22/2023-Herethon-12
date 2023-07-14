@@ -24,6 +24,16 @@
   -webkit-animation: fadeout 3s; /* Safari and Chrome */
   animation-fill-mode: forwards;
 }
+#clickzone {
+  position: relative;
+  opacity: 0;
+  width: 200px;
+  height: 600px;
+  margin-left: 100px;
+  margin-top: 100px;
+  border: none;
+  background-color: white;
+}
 @keyframes fadeout {
   from {
     opacity: 1;

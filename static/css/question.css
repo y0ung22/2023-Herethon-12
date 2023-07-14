@@ -40,13 +40,13 @@
   border: none;
   position: absolute;
   top: 61px;
-  right: 25px;
+  left: 25px;
 }
 
 #goReplyBtn {
   position: relative;
-  width: 108px;
-  height: 29px;
+  width: 112px;
+  height: 30px;
   margin-top: 50px;
   background-image: url("../../static/Image/label.png");
   background-size: cover;

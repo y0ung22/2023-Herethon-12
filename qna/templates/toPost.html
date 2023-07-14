@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="{% static '/css/toPost.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="textBox">
-        이곳을 떠나신 분들이
-        <br />
-        글을 남겨주셨어요.
-        <br />
-        확인해보실래요?
-      </div>
-      <div id="goBtn">
-        <form method="POST" action="{% url 'post:post_list' %}">
-          {% csrf_token %}
-          <button type="submit">방명록으로 이동</button>
-        </form>
+    <div id="bigbg">
+      <div id="container">
+        <div id="textBox">
+          이곳을 떠나신 분들이
+          <br />
+          글을 남겨주셨어요.
+          <br />
+          확인해보실래요?
+        </div>
+        <div id="goBtn">
+          <form method="POST" action="{% url 'post:post_list' %}">
+            {% csrf_token %}
+            <button type="submit">방명록으로 이동</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
