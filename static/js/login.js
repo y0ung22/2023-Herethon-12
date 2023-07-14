@@ -1,1 +1,5 @@
-// 로그인 성공 시 질문 페이지로 이동 js
+errMsg = document.getElementById("errorMsg").innerHTML;
+
+if (errMsg) {
+  alert(errMsg);
+}
