@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="{% static '/css/colors3.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="color">
-        <div id="fade-out-box"></div>
-        <form
-          method="POST"
-          action="{% url 'qna:show_question' qrecord=qna.index %}"
-        >
-          {% csrf_token %}
-          <button type="submit" id="clickzone">
-            다시 질문 페이지 돌아가기
-          </button>
-        </form>
+    <div id="bigbg">
+      <div id="container">
+        <div id="color">
+          <div id="fade-out-box"></div>
+          <form
+            method="POST"
+            action="{% url 'qna:show_question' qrecord=qna.index %}"
+          >
+            {% csrf_token %}
+            <button type="submit" id="clickzone">
+              다시 질문 페이지 돌아가기
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

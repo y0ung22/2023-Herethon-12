@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>엔딩페이지</title>
-    <link rel="stylesheet" href="../../static/css/ending.css" />
+    <link rel="stylesheet" href="{% static '/css/ending.css' %}" />
   </head>
   <body>
-    <div id="container">
-      <div id="textBox">
-        나는 여전히 당신이며<br />
-        당신의 삶입니다.
-      </div>
-    </div>
-      <div>
+    <div id="bigbg">
+      <div id="container">
+        <div id="textBox">
+          나는 여전히 당신이며<br />
+          당신의 삶입니다.
+        </div>
         <form method="POST" action="{% url 'qna:start' %}">
           {% csrf_token %}
-          <button type="submit">toPost로 이동</button>
+          <button type="submit" id="clickzone">toPost로 이동</button>
         </form>
       </div>
-
+    </div>
   </body>
 </html>
