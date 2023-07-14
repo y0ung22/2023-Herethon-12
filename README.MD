@@ -60,6 +60,14 @@ Communication : <img src="https://img.shields.io/badge/notion-000000?style=for-t
 
 <br>
 
+### API 명세서
+
+<img width="1203" alt="KakaoTalk_20230715_054643346" src="https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/8b8810fe-4f9f-4b2a-b96e-caeb30feff90">
+
+<img width="1210" alt="KakaoTalk_20230715_054710869" src="https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/3f146f7e-4169-40b4-b9e8-5d3a266c94fe">
+
+
+
 ### 폴더 구조
 
   ```
