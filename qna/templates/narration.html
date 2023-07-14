@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Narration</title>
-    <link rel="stylesheet" href="{% static '/css/narration.css' %}" />
+    <link rel="stylesheet" href="/static/css/narration.css" />
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   </head>
   <body>
@@ -15,9 +15,9 @@
       <div id="btnArea">
         <form method="POST" action="{% url 'qna:show_question' user.qrecord %}">
           {% csrf_token %}
-            <button id="startBtn" type="submit">
+          <button id="startBtn" type="submit">
             <span>유영하러 가기</span>
-            </button>
+          </button>
         </form>
       </div>
     </div>

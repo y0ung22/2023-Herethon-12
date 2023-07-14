@@ -41,11 +41,6 @@ form {
 }
 
 #text {
-  padding: 10px;
-  width: 297px;
-  height: 342px;
-  border: solid 1.5px #e83454;
-  resize: none;
   color: #8f8f8f;
   font-family: Pretendard Variable;
   font-size: 15px;
@@ -53,6 +48,14 @@ form {
   font-weight: 600;
   text-align: justify;
   line-height: normal;
+}
+
+textarea {
+  padding: 10px;
+  width: 275px;
+  height: 342px;
+  border: solid 1.5px #e83454;
+  resize: none;
 }
 
 button {
