@@ -42,6 +42,8 @@ def write_answer(request, index):
                 return render(request, 'question.html', context={'qna': nextqna})  # 일반 질문일 경우 다음 qna 보여줌
 
             else:  # 마지막 게시글이라면 colors5로 이동
+                user.is_staff = True
+                user.save()
                 return render(request, 'colors5.html')
 
     return redirect('user:mainPage') # get요청시 메인 페이지로
