@@ -41,15 +41,6 @@ GIF Images
 ##팀원 소개
 
 
-|    이성경     |  김가영  |  박소정  | 문수호 | 최유신 |
-| :-----------: | :------: | :------: | :----: | :----: |
-| _기획&디자인_ | _프론트_ | _프론트_ |  _백_  |  _백_  |
-| 이성경        | 김가영   | 박소정   | 문수호  | 최유신  |
-| ------------- | -------- | -------- | ------- | ------- |
-| _기획&디자인_ | _프론트_ | _프론트_ | _백_    | _백_    |
-| 테스트1       | 테스트2  | 테스트3  | 테스트4 | 테스트5 |
-| 테스트1       | 테스트2  | 테스트3  | 테스트4 | 테스트5 |
-
 
 <br>
 
@@ -66,15 +57,54 @@ Communication : <img src="https://img.shields.io/badge/notion-000000?style=for-t
 
 <br>
 
-## 구현 기능
+### 폴더 구조
 
-### 기능 1
+  ```
+📂 all_project
+└─yuyong
+├─ yuyong
+│  ├─ **init**.py
+│  ├─ [asgi.py](http://asgi.py/)
+│  ├─ [settings.py](http://settings.py/)
+│  ├─ [urls.py](http://urls.py/)
+│  └─ [wsgi.py](http://wsgi.py/)
+├─ post
+│  ├─ **init**.py
+│  ├─ [admin.py](http://admin.py/)
+│  ├─ [apps.py](http://apps.py/)
+│  ├─ [models.py](http://models.py/)
+│  ├─ [tests.py](http://tests.py/)
+│  ├─ urls.py
 
-### 기능 2
+│  ├─ forms.py
 
-### 기능 3
+│  └─ [views.py](http://views.py/)
 
-### 기능 4
+├─ qna
+│  ├─ **init**.py
+│  ├─ [admin.py](http://admin.py/)
+│  ├─ [apps.py](http://apps.py/)
+│  ├─ [models.py](http://models.py/)
+│  ├─ [tests.py](http://tests.py/)
+│  ├─ urls.py
+
+│  ├─ forms.py
+
+│  └─ [views.py](http://views.py/)
+
+├─ user
+│  ├─ **init**.py
+│  ├─ [admin.py](http://admin.py/)
+│  ├─ [apps.py](http://apps.py/)
+│  ├─ [models.py](http://models.py/)
+│  ├─ [tests.py](http://tests.py/)
+│  ├─ urls.py
+
+│  ├─ forms.py
+
+│  └─ [views.py](http://views.py/)
+└─ [manage.py](http://manage.py/)
+  ```
 
 <br>
 
