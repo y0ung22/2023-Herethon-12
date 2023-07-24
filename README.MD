@@ -23,31 +23,9 @@
 
 <br>
 
-## 기술 스택
-
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
-<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-=======
-
-## 구현 기능
-
-<img src="./images/face/design.png">
-### 기능 1
-=======
-
 ## 팀원 소개
 
 ![Group 1](https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/ee46ac19-066e-42b7-829e-125b5aff6516)
-
-
-|    이성경     |  김가영  |  박소정  | 문수호 | 최유신 |
-| :-----------: | :------: | :------: | :----: | :----: |
-| _기획&디자인_ | _프론트_ | _프론트_ |  _백_  |  _백_  |
-
 
 <br>
 
