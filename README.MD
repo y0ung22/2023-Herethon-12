@@ -44,7 +44,7 @@ Evironment : <img src="https://img.shields.io/badge/github-181717?style=for-the-
 
 <br>
 
-### API 명세서
+## API 명세서
 
 <img width="1203" alt="KakaoTalk_20230715_054643346" src="https://github.com/2023-HERETHON/2023-Herethon-12/assets/126054466/8b8810fe-4f9f-4b2a-b96e-caeb30feff90">
 
@@ -52,7 +52,7 @@ Evironment : <img src="https://img.shields.io/badge/github-181717?style=for-the-
 
 
 
-### 폴더 구조
+## 폴더 구조
 
   ```
 📂 all_project
